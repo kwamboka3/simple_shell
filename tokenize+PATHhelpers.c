@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * tokenize - creates array of tokens based on user string
  * @buffer: pointer to user string
@@ -7,10 +7,10 @@
  */
 char **tokenize(char *buffer)
 {
-    char *token = NULL;
+    char *token;
     int i = 0, wordcount = 0;
     char *delimiter = " \n";
-    char **av = NULL;
+    char **av;
 
     wordcount = _splitstring(buffer);
     if (!wordcount)
@@ -36,7 +36,9 @@ char **tokenize(char *buffer)
  */
 int _splitPATH(char *str)
 {
-    int i, searchflag = 1, wordcount = 0;
+    int i;
+    int searchflag = 1;
+    int wordcount = 0;
 
     for (i = 0; str[i]; i++)
     {
