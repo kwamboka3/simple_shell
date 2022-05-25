@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * _strdup - duplicates a string
  * @str: pointer to string to duplicate
@@ -8,7 +8,7 @@
 char *_strdup(char *str)
 {
     int i;
-    char *dest_str = NULL;
+    char *dest_str;
 
     if (str == NULL)
         return (NULL);
@@ -32,7 +32,9 @@ char *_strdup(char *str)
  */
 int _splitstring(char *str)
 {
-    int i, searchflag = 1, wordcount = 0;
+    int i;
+    int searchflag = 1;
+    int wordcount = 0;
 
     for (i = 0; str[i]; i++)
     {
@@ -74,7 +76,8 @@ int _strcmp(const char *s1, const char *s2)
  */
 char *_strcat(char *dest, char *src)
 {
-    int i, j;
+    int i;
+    int j;
 
     for (i = 0; dest[i] != '\0'; i++)
         ;
